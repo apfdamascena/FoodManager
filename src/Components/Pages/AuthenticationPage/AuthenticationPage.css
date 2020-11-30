@@ -1,0 +1,44 @@
+.authentication-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    top: 200px;
+}
+
+.authentication-wrapper h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #474747;
+    text-align: center;
+}
+
+.authentication-wrapper Form {
+    width: 500px;
+    position: relative;
+    top: 30px;
+}
+
+.authentication-wrapper Form Button {
+    position: relative;
+    left: 220px;
+    top: 20px;
+}
+
+.authentication-wrapper .new-user {
+    position: relative;
+    top: 80px;
+}
+
+
+.authentication-wrapper .new-user p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #474747;
+    cursor: pointer;
+}
+
+.authentication-wrapper .new-user p:hover {
+    color: #2E2E2E;
+}

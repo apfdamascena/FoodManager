@@ -4,7 +4,10 @@ import './Footer.css';
 import BoxProduct from '../BoxProduct/BoxProduct';
 
 
-function Footer(){
+function Footer(props){
+    const { restaurantData } = props;
+    console.log(restaurantData, 'datafooter')
+    const products = restaurantData?.products
     const[redirect, setRedirect] = useState('');
 
     function handleAddProduct(){
@@ -24,12 +27,9 @@ function Footer(){
                 <button id = 'register-button' onClick = {handleAddProduct}>Cadastrar Produto</button>
             </div>
             <div className = "box-footer-content">
-            <BoxProduct image = "https://exitoina.uol.com.br/media/_versions/babyyoda309850_widelg.jpg" nomeProduto = "biscoitaaadsadas"/>
-            <BoxProduct image = "https://exitoina.uol.com.br/media/_versions/babyyoda309850_widelg.jpg" nomeProduto = "biscoitaaadsadas"/>
-            <BoxProduct image = "https://exitoina.uol.com.br/media/_versions/babyyoda309850_widelg.jpg" nomeProduto = "biscoitaaadsadas"/>
-            <BoxProduct image = "https://exitoina.uol.com.br/media/_versions/babyyoda309850_widelg.jpg" nomeProduto = "biscoitaaadsadas"/>
-            <BoxProduct image = "https://exitoina.uol.com.br/media/_versions/babyyoda309850_widelg.jpg" nomeProduto = "biscoitaaadsadas"/>
-
+                {products?.map((product) => (
+                    <BoxProduct nomeProduto={product.name} idProduto={product._id} />
+                ))}
             </div>
         </div>
     );
